@@ -5,11 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geometricas | Curso Practico de JavaScript en Platzi</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>
-        Figuras Geometricas
-    </h1>
+    <header class="header">
+        <h1 class="header__title">
+            Figuras Geometricas
+        </h1>
+    </header>
+    <section class="calculator">
+        <section class="calculator__navegator">
+            <p id="selected__calculator">Cuadrado</p>
+            <div>
+                <ul>
+                <li onclick="calculadora(1)"><p>cuadrado</p></li>
+                <li onclick="calculadora(2)"><p>triangulo</p></li>
+                <li onclick="calculadora(3)"><p>circulo</p></li>
+            </ul>
+            </div>
+            
+        </section>
+        <section id="square-calculator__container" class="calculator__container">
+            <h2 class="calculatot__container--subtitle">Calcula el área y perímetro de un cuadrado</h2>
+            <form action="">
+                <div class="calculator__container--input-container">
+                    <label for="InputCuadrado">
+                        Escriba el largo de cada una de las caras:
+                    </label>
+                    <input id="InputCuadrado" type="number"/>
+                </div>
+                
+                <div class="calculator__container--buttons-container" >
+                    <button type="button" onclick="calcularPerimetroCuadrado()">
+                        Perímetro
+                    </button>
+                    <button type="button" onclick="calcularAreaCuadrada()">
+                        Área
+                    </button>
+                </div>
+                <div class="calculator__container--results">
+                    <label >Resultado:</label>
+                    <label id="calculator__container--result">...</label>
+                </div>
+            </form>
+        </section>
+
+        <!--    -->
+        <section id="triangle-calculator__container" class="calculator__container">
+            <h2 class="calculatot__container--subtitle">Calcula el área y perímetro de un triangulo</h2>
+            <form action="">
+                <div class="calculator__container--input-container">
+                    <label for="InputTrianguloLado1">
+                        Escriba el largo de la 1da cara del triangulo:
+                    </label>
+                    <input id="InputTrianguloLado1" type="number"/>
+                </div>
+                <div class="calculator__container--input-container">
+                    <label for="InputTrianguloLado2">
+                        Escriba el largo de la 2da cara del triangulo:
+                    </label>
+                    <input id="InputTrianguloLado2" type="number"/>
+                </div>
+                <div class="calculator__container--input-container">
+                    <label for="InputTrianguloBase">
+                        Escriba el largo de la base del triangulo:
+                    </label>
+                    <input id="InputTrianguloBase" type="number"/>
+                </div>
+                
+                <div class="calculator__container--buttons-container" >
+                    <button type="button" onclick="calcularPerimetroTriangulo()">
+                        Perímetro
+                    </button>
+                    <button type="button" onclick="calcularAreaTriangulo()">
+                        Área
+                    </button>
+                </div>
+                <div class="calculator__container--buttons-container" >
+                    <button type="button" onclick="calcularAlturaTriangulo()">
+                        Altura
+                    </button>
+                </div>
+                <div class="calculator__container--results">
+                    <label >Resultado:</label>
+                    <label id="calculator__container--result-triangle">...</label>
+                </div>
+            </form>
+        </section>
+
+    </section>
+    <footer class="footer">
+        <h3 class="footer__subtitle" >Nunca Pares de Aprender</h3>
+    </footer>
     <script src="./figuras.js"></script>
 </body>
 </html>
