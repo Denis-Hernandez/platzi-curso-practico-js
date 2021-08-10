@@ -1,8 +1,8 @@
 #square-calculator__container{
-    display: none;
+    display: block;
 }
 #triangle-calculator__container{
-    display: block;
+    display: none;
 }
 
 body{
